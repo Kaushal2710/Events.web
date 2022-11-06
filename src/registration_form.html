@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <script src="https://www.gstatic.com/firebasejs/9.8.4/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.8.4/firebase-firestore-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.8.4/firebase-auth-compat.js"></script>
+
+    <script src="https://requirejs.org/docs/release/2.3.5/minified/require.js"></script>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        body {
+            font-family: Calibri, Helvetica, sans-serif;
+            background-color: pink;
+        }
+
+        .container {
+            padding: 50px;
+            background-color: lightblue;
+        }
+
+        input[type=text],
+        input[type=password],
+        textarea {
+            width: 100%;
+            padding: 15px;
+            margin: 5px 0 22px 0;
+            display: inline-block;
+            border: none;
+            background: #f1f1f1;
+        }
+
+        input[type=text]:focus,
+        input[type=password]:focus {
+            background-color: orange;
+            outline: none;
+        }
+
+        div {
+            padding: 10px 0;
+        }
+
+        hr {
+            border: 1px solid #f1f1f1;
+            margin-bottom: 25px;
+        }
+
+        .registerbtn {
+            background-color: #4CAF50;
+            color: white;
+            padding: 16px 20px;
+            margin: 8px 0;
+            border: none;
+            cursor: pointer;
+            width: 100%;
+            opacity: 0.9;
+        }
+
+        .registerbtn:hover {
+            opacity: 1;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="w-screen h-screen flex items-center justify-center ">
+        <div class="flex w-96 2 h-96 items-center flex-col justify-center border-slate-400 border-2 rounded-md">
+    <form id="registrationForm">
+        <div class="container">
+            <center>
+                <h1>Registeration Form</h1>
+            </center>
+            <hr>
+            <label> Name </label>
+            <input type="text" name="name" placeholder="name" size="40" required />
+            <div>
+                <label>
+                    Weight category: 
+                </label>
+
+                <select name="category">
+                    <option  value="15">Featherweight (15Kg)</option>
+                    <option  value="60">Middleweight (60Kg)</option>
+                </select>
+            </div>
+            <div>
+                <label>
+                    Participant type :
+                </label><br>
+                <input type="radio" value="internal" name="type" checked> Internal
+                <input type="radio" value="external" name="type"> External
+
+            </div>
+            <label>
+                Phone :
+            </label>
+            <input type="text" name="phone" placeholder="phone no." size="10" / required>
+            
+            <button type="submit" id="registerbtn" class="w-20 h-6 bg-green-600 hover:bg-green-700 hover:scale-105 text-white rounded-sm m-2">Register</button>
+    </form>
+</div>
+    </div>
+</body>
+<script type="module" src="../firebase.config/registration.js"></script>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <script src="https://www.gstatic.com/firebasejs/9.8.4/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.8.4/firebase-firestore-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.8.4/firebase-auth-compat.js"></script>
+
+    <script src="https://requirejs.org/docs/release/2.3.5/minified/require.js"></script>
+
+</head>
+
+<body>
+
+    <div class="px-8 p-2 flex items-center absolute left-0 right-0 top-0 bg-neutral-500">
+        <a href="../landing_page.html" id="backDiv" class="text-white px-1"><img class="h-8" src="assets/backarrow_icon.png" alt="back arrow"></a>
+    </div>
+    <div class="w-screen h-screen flex items-center justify-center">
+        <div class="flex w-80 2 h-96 items-center flex-col justify-center border-slate-400 border-2 rounded-md">
+            <button id="googleAuth"
+                class="w-40 h-8 bg-green-600 hover:bg-green-700 hover:scale-105 text-white rounded-sm">Connect with
+                Google</button>
+            <div class="m-4">OR</div>
+            <div class="flex flex-col items-center">
+                <input type="email" name="" id="email" placeholder="e-mail"
+                    class="border-2 border-slate-300 rounded-sm m-1 placeholder:text-slate-500 w-48 px-2">
+                <input type="password" name="" id="password" placeholder="password"
+                    class="border-2 border-slate-300 rounded-sm m-1 placeholder:text-slate-500 w-48 px-2">
+                <div class="flex w-full items-center justify-center">
+                    <button id="logIn"
+                        class="w-20 h-6 bg-green-600 hover:bg-green-700 hover:scale-105 text-white rounded-sm m-2">Log
+                        In
+                    </button>
+                </div>
+            </div>
+            <h3>New user? <a href="signup_page.html"><u class="text-blue-700">Sign Up!</u></a></h3>
+        </div>
+    </div>
+    <script type="module" src="../firebase.config/login.js"></script>
+
+</body>
+
+</html>

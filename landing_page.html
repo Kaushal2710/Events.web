@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link rel="stylesheet" href="/src/login-alert-popup.css" />
+
+    <title>ROBOVENTS</title>
+  </head>
+
+  <body class="h-screen w-screen overflow-scroll overflow-x-hidden m-0 p-0">
+    <top-nav
+      class="navbar flex flex-row shadow-xl w-screen text-white opacity-80 items-center px-6 py-4 space-between fixed z-10 left-0 right-0 top-0 bg-black"
+    >
+      <div class="flex flex-grow">
+        <img src="src/assets/robovitics-logo.png" class="w-40 h-8" alt="logo" />
+      </div>
+      <ul class="flex space-x-12 mx-12">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about-us">About Us</a></li>
+        <li><a href="#FAQs">FAQs</a></li>
+        <li><a href="src/login_page.html">Log In</a></li>
+        <li id="username">Name</li>
+      </ul>
+    </top-nav>
+    <div id="home" class="flex w-screen h-screen justify-center items-center">
+      <section
+        class="flex flex-col flex-wrap w-2/3 h-1/2 mx-auto my-auto items-center justify-center shadow-2xl border-2 bg-gradient-to-b from-gray-400 border-slate-400 rounded-3xl relative"
+      >
+        <div
+          class="w-56 h-56 border-2 border-slate-300 ml-8 absolute left-0 rounded-md"
+        >
+          <img
+            src="src/assets/robowars-logo-2.png"
+            alt="robo wars logo"
+            class=""
+          />
+        </div>
+        <div class="">
+          <h1 class="text-6xl ml-6">ROBOWARS</h1>
+          <h2 class="text-2xl ml-6 mt-4">
+            The Ultimate Combat Robotics Competition
+          </h2>
+          <div
+            id="timer"
+            class="absolute -top-5 -right-5 bg-neutral-800 text-white rounded-full py-2 px-4 shadow-2xl"
+          >
+            <div class="flex justify-center">
+              <div class="flex px-1">
+                <h1 id="days">00</h1>
+                <h2 id="daystxt">d</h2>
+              </div>
+              <div class="flex px-1">
+                <h1 id="hours">00</h1>
+                <h2 id="hourstxt">hr</h2>
+              </div>
+              <div class="flex px-1">
+                <h1 id="minutes">00</h1>
+                <h2 id="minstxt">m</h2>
+              </div>
+              <div class="flex px-1">
+                <h1 id="seconds">00</h1>
+                <h2 id="secstxt">s</h2>
+              </div>
+            </div>
+
+            <div style="background: rgb(204, 24, 24)" class="alert hidden">
+              <h1 style="padding: 50px 80px; color: white">
+                We are sorry, Event ended !
+              </h1>
+            </div>
+          </div>
+
+          <button
+            class="popup bg-slate-900 absolute right-12 bg-green-600 hover:bg-green-700 hover:scale-105 text-white rounded-sm m-8 px-2 py-1 rounded-md"
+            id="register-btn"
+          >
+            Register Now
+            <span class="popuptext" id="myPopup"
+              >Kindly login to register!</span
+            >
+          </button>
+        </div>
+      </section>
+    </div>
+
+    <section class="h-screen w-screen bg-gray-800 relative">
+      <div
+        class="flex h-2/5 w-screen text-white text-7xl text-bold items-center underline underline-offset-8 decoration-2 justify-center"
+      >
+        Memories
+      </div>
+      <div
+        class="h-3/5 w-screen absolute bottom-0 text-white text-xl px-40 text-justify leading-10"
+      >
+        We are a group of ardent tech enthusiasts with the zeal to learn, to
+        build and a thirst to be the best. A small group of passionate techies
+        to explore different domains of technology has now blossomed into the
+        official Robotics club of VIT, Vellore. Our mission is to spread
+        knowledge about robotics by organizing various free workshops and
+        seminars that help people out in finding their technical niches and
+        build their own projects. Our members collaborate on some incredible
+        projects and nurture glorious teams that represent us all over the
+        world, and have several accolades to their name. With pride, all
+        RoboVITians try to live up to the legacy left by our predecessors.
+      </div>
+    </section>
+
+    <section id="about-us" class="h-screen w-screen relative">
+      <div
+        class="flex h-2/5 w-screen text-7xl text-bold items-center underline underline-offset-8 decoration-2 justify-center"
+      >
+        About us
+      </div>
+      <div
+        class="h-3/5 w-screen absolute bottom-0 text-xl px-40 text-justify leading-10"
+      >
+        We are a group of ardent tech enthusiasts with the zeal to learn, to
+        build and a thirst to be the best. A small group of passionate techies
+        to explore different domains of technology has now blossomed into the
+        official Robotics club of VIT, Vellore. Our mission is to spread
+        knowledge about robotics by organizing various free workshops and
+        seminars that help people out in finding their technical niches and
+        build their own projects. Our members collaborate on some incredible
+        projects and nurture glorious teams that represent us all over the
+        world, and have several accolades to their name. With pride, all
+        RoboVITians try to live up to the legacy left by our predecessors.
+      </div>
+    </section>
+
+    <section id="FAQs" class="h-2/3 w-screen bg-gray-800 relative">
+      <div
+        class="flex w-screen py-20 text-white text-7xl text-bold items-center underline underline-offset-8 decoration-2 justify-center"
+      >
+        FAQs
+      </div>
+      <div class="w-screen text-white text-xl px-40 text-justify leading-10">
+        We are a group of ardent tech enthusiasts with the zeal to learn, to
+        build and a thirst to be the best. A small group of passionate techies
+        to explore different domains of technology has now blossomed into the
+        official Robotics club of VIT, Vellore. Our mission is to spread
+        knowledge about robotics by organizing various free workshops and
+        seminars that help people out in finding their technical niches and
+        build their own projects. Our members collaborate on some incredible
+        projects and nurture glorious teams that represent us all over the
+        world, and have several accolades to their name. With pride, all
+        RoboVITians try to live up to the legacy left by our predecessors.
+      </div>
+    </section>
+
+    <bottom-nav
+      class="w-screen h-1/3 flex flex-col shadow-xl bg-black text-white items-center justify-center absolute z-10"
+    >
+      <div
+        class="flex w-screen items-center justify-center text-white text-4xl"
+      >
+        Contact Us
+      </div>
+
+      <ul class="flex space-x-28 m-12">
+        <li class="mr-8">Contact: xxxxxx xxxxxx</li>
+        <img src="" alt="insta" />
+        <img src="" alt="linked in" />
+        <img src="" alt="twitter" />
+        <img src="" alt="facebook" />
+        <img src="" alt="youtube" />
+        <li class="ml-8">E-mail: abc@gmail.com</li>
+      </ul>
+    </bottom-nav>
+
+    <script src="/firebase.config/landingpage.js"></script>
+    <script src="/src/popup.js"></script>
+    <script src="/src/countdowntimer.js"></script>
+    
+  </body>
+</html>
